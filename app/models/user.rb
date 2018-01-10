@@ -8,4 +8,7 @@ validates :email, presence: true, length: {maximum: 255} , format: {with: VALID_
 
 before_save { email.downcase! }
 
+
+
+has_secure_password
 end
