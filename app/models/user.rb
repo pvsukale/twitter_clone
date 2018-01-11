@@ -9,6 +9,10 @@ class User < ApplicationRecord
     before_create :create_activation_digest
     has_secure_password
     has_many :microposts, dependent: :destroy
+
+    def feed
+        microposts
+    end
     
     def create_reset_digest
         self.reset_token = User.new_token
