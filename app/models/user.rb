@@ -21,6 +21,14 @@ class User < ApplicationRecord
         BCrypt::Password.new(remeber_digest).is_password?(remember_token)
     end
 
+
+    def authenticated_digest?(token)
+        digest = self.activation_digest
+        return false if digest.nil?
+        BCrypt::Password.new(digest).is_password?(token)
+        
+    end
+
     def self.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
         BCrypt::Password.create(string, cost: cost)
