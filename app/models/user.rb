@@ -21,7 +21,15 @@ class User < ApplicationRecord
         BCrypt::Password.new(remeber_digest).is_password?(remember_token)
     end
 
+    def activate
+        update_attribute(:activated,    true)
+        update_attribute(:activated_at, Time.zone.now)
+    end
 
+    def send_activation_email
+        UserMailer.account_activation(self).deliver_now
+    end
+    
     def authenticated_digest?(token)
         digest = self.activation_digest
         return false if digest.nil?
