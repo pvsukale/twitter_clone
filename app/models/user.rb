@@ -19,7 +19,10 @@ class User < ApplicationRecord
     has_many :following, through: :active_relationships, source: :followed
 
     def feed
-        microposts
+        following_ids = "SELECT followed_id FROM relationships
+        WHERE  follower_id = :user_id"
+Micropost.where("user_id IN (#{following_ids})
+        OR user_id = :user_id", user_id: id)
     end
     
     def create_reset_digest
