@@ -1,3 +1,5 @@
+![build status](https://travis-ci.org/pvsukale/twitter_clone.svg?branch=master)
+
 # Ruby on Rails Tutorial twitter application
 
 This is the sample application for
@@ -5,5 +7,3 @@ This is the sample application for
 Learn Web Development with Rails*](http://www.railstutorial.org/).
 
 I will create seperate branch for each chapter
-
-# Exercises and solutions
