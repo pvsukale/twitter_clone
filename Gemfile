@@ -46,6 +46,7 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'guard-minitest'
   gem 'selenium-webdriver'
+  gem 'rake'
 end
 
 gem 'carrierwave',             '1.2.2'
