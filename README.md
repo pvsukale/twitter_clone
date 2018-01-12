@@ -1,4 +1,4 @@
-![build status](https://travis-ci.org/pvsukale/twitter_clone.svg?branch=master)
+
 
 # Ruby on Rails Tutorial twitter application
 
