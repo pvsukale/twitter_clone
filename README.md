@@ -7,3 +7,5 @@ This is the sample application for
 Learn Web Development with Rails*](http://www.railstutorial.org/).
 
 I will create seperate branch for each chapter
+
+This project is deployed on heroku. Check it out [here.](https://twitter-clone-tuorial.herokuapp.com/)
