@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
 
     def destroy
         @comment = Comment.find(params[:id])
-        if current_user == @comment.user or current_user = @comment.micropost.user
+        if current_user == @comment.user or current_user == @comment.micropost.user
             @comment.destroy
             flash[:success] = "Micropost deleted"
             redirect_to request.referrer || root_url

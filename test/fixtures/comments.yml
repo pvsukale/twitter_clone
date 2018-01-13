@@ -2,10 +2,10 @@
 
 one:
   content: MyText
-  user: one
-  micropost: one
+  user: michael
+  micropost: orange
 
 two:
   content: MyText
-  user: two
-  micropost: two
+  user: lana
+  micropost: wonder
