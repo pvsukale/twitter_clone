@@ -3,10 +3,10 @@ class CommentsController < ApplicationController
     before_action :logged_in_user, only: [:create , :destroy]
     def create
         @comment = Comment.new
-        @user = User.find(params[:user])
+        
     
         @micropost = Micropost.find(params[:micropost])
-        @comment.user = @user
+        @comment.user = current_user
         @comment.micropost = @micropost
         @comment.content = params[:comment][:content]
      
