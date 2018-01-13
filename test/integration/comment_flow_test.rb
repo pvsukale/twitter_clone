@@ -1,7 +1,6 @@
 require 'test_helper'
 
-class CommentTest < ActionDispatch::IntegrationTest
-
+class CommentFlowTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
     @micropost = microposts(:orange)
